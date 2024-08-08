@@ -1,0 +1,225 @@
+:root {
+    --body_background: white;
+    --contrast_background: #eeeeee;
+    --body_color: black;
+    --contrast_body_color: grey;
+    --link_color: rgb(75, 75, 75);
+    --link_active_color: rgb(219, 219, 219);
+    --input_focus_color: rgb(104 104 104 / 15%);
+}
+
+[data-theme="dark"] {
+    --body_background: #282c34;
+    --contrast_background: #212529;
+    --body_color: white;
+    --link_color: #f8f8f8;
+    --bs-link-color: var(--link_color);
+    --text_hover_color: rgb(104 104 104);
+    --link_active_color: rgb(141, 245, 245);
+    --input_focus_color: rgb(104 104 104 / 15%);
+}
+
+/* Toggle Button */
+.dark_mode_input {
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.dark_mode_input:focus-visible {
+    border: 1px solid var(--body_color);
+}
+
+/* To create surface of toggle button */
+.dark_mode_input:after {
+    content: "";
+    width: 60px;
+    height: 20px;
+    display: inline-block;
+    background: rgba(196, 195, 195, 0.55);
+    border-radius: 18px;
+    transform: translateY(2px);
+    clear: both;
+    z-index: 1;
+}
+
+/* Contents before checkbox to create toggle handle */
+.dark_mode_input:before {
+    content: "AM";
+    color: var(--body_background);
+    font-size: 10px;
+    width: 25px;
+    height: 25px;
+    padding: 0.3rem;
+    border-radius: 50px;
+    box-shadow: 2px 0px 1px rgba(70, 70, 70, 0.55);
+    display: block;
+    position: absolute;
+    background-color: var(--link_color);
+    left: 0;
+    z-index: 2;
+    transition: ease 0.3s;
+}
+
+.dark_mode_input:checked:before {
+    content: "PM";
+    translate: 150%;
+    box-shadow: -2px 0px 2px rgba(70, 70, 70, 0.55);
+}
+
+/* END DarkMode Toggle */
+
+body {
+    --bs-body-bg: var(--body_background);
+}
+
+section, footer {
+    background-color: var(--body_background);
+    color: var(--body_color);
+}
+
+button:not(:disabled), .button, .btn-close {
+    background-color: var(--contrast_background);
+    --bs-btn-close-color: var(--body_color);
+    color: var(--body_color);
+}
+
+.btn-close, [aria-label="Close"] {
+    fill: #eeeeee;
+}
+
+section:nth-of-type(odd), form {
+    background-color: var(--contrast_background);
+    color: var(--contrast_body_color);
+}
+
+#hero button {
+    background-color: var(--body_background) !important;
+    color: var(--body_color) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+#hero button:hover {
+    background-color: var(--contrast_background) !important;
+    color: var(--body_background);
+}
+
+.App ul {
+    --bs-dropdown-link-color: var(--body_color);
+    background-color: var(--contrast_background);
+    color: var(--body_color);
+}
+
+.App a {
+    color: var(--link_color);
+}
+
+.App a:hover {
+    color: var(--text_hover_color);
+}
+
+.App ul a:focus-visible {
+    background-color: var(--contrast_background);
+}
+.App .navbar a:focus {
+    color: var(--contrast_body_color);
+}
+
+input:not([type="checkbox"]),
+input:focus:not([type="checkbox"]) {
+    background-color: var(--body_background);
+    color: var(--contrast_body_color);
+    border: 0;
+}
+
+input:not([disabled]):not([type="checkbox"]):focus {
+    box-shadow: 0 0 0 0.25rem var(--input_focus_color);
+}
+
+.navbar, .sidebar {
+    background-color: var(--contrast_background) !important;
+}
+
+.navbar a, .navbar label {
+    color: var(--body_color);
+}
+
+.navbar a:hover, .navbar label:hover {
+    color: var(--contrast_body_color);
+}
+
+.navbar ul {
+    text-align: center;
+}
+
+.navbar-toggler {
+    --bs-navbar-color: var(--body_color);
+    background-color: var(--body_background);
+}
+
+.nav-link.active {
+    color: var(--body_color) !important;
+}
+
+.scroll-progress {
+    background-color: var(--body_background);
+}
+
+.progress-bar {
+    --bs-progress-bar-bg: var(--body_color);
+}
+
+.modal-content {
+    color: var(--body_color)
+}
+
+.content_wrapper {
+    background-color: var(--body_background);
+    color: var(--body_color);
+}
+
+.slick-slide {
+    background-color: var(--body_color);
+    color: var(--contrast_background);
+}
+
+.filters .filter_select {
+    background-color: var(--contrast_background);
+    color: var(--body_color);
+}
+
+.filters .filter_select:hover {
+    background-color: var(--body_color);
+    color: var(--body_background);
+}
+
+.filters .filter_select:hover .badge {
+    background-color: var(--body_background);
+    color: var(--body_color);
+}
+
+.filters .badge, .character_info .badge {
+    background-color: var(--body_color);
+    color: var(--body_background);
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    --bs-dropdown-link-hover-color: var(--body_background);
+    --bs-dropdown-link-hover-bg: var(--body_color);
+}
+
+.App .card {
+    background-color: var(--contrast_background);
+    color: var(--body_color);
+}
+
+@media screen and (max-width: 768px) {
+	.darm_mode_label {
+		display: none;
+	}
+}
