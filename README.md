@@ -35,6 +35,7 @@ As required for the task, the following features were implemented:
 ## Bonus features
 
 - [x] Dark/Light mode toggle.
+- [x] ScrollProgress bar.
 
 ## Improvements
 
