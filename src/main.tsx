@@ -6,9 +6,7 @@ import "./App.css";
 import './index.css';
 
 import { createBrowserRouter, Navigate, RouterProvider } from 'react-router-dom'
-import { FilterProvider } from './context/FiltersContext'
 import Characters from './pages/people'
-import CharacterInfo from './components/CharacterInfo'
 import { PaginateProvider } from './context/PaginateContext';
 
 const router = createBrowserRouter([
@@ -30,8 +28,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <PaginateProvider>
-      <FilterProvider>
         <RouterProvider router={router} />
-      </FilterProvider>
     </PaginateProvider>
 )
