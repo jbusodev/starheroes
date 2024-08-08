@@ -17,12 +17,6 @@ const router = createBrowserRouter([
   {
     path: "people",
     element: <Characters />,
-    children: [
-      {
-        path: ":characterId",
-        element: <CharacterInfo />,
-      },
-    ],
   }
 ]);
 
