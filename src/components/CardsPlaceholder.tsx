@@ -1,11 +1,9 @@
-import React from 'react'
-
 const CardsPlaceholder = () => {
     const placeholders = Array.from({ length: 8 }, (_, index) => index);
 
     return (
         <div className="cards">
-            {placeholders.map((placeholder, index) => (
+            {placeholders.map((index) => (
                 <div key={`lazy-card_${index}`} className="card_wrapper col-12 col-sm-6 col-md-4 col-lg-3 p-3">
                     <div className="card disabled" aria-hidden="true">
                         <svg className="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" focusable="false">
