@@ -37,7 +37,7 @@ function toWebpImage( {imagePath, newExtension }: toWebpProps ): string {
 const ImageWebp = ( {src, onClick, alt, title}: ImageWebProps ) => {
     return (
         <picture onClick={onClick} className='card-img-top'>
-            {/* <source srcSet={toWebpImage({ imagePath: src, newExtension: 'webp' })} type='image/webp' /> */}
+            <source srcSet={toWebpImage({ imagePath: src, newExtension: 'webp' })} type='image/webp' />
             <img className='w-100 h-auto' src={src} title={title} alt={alt} />
         </picture>
     )
