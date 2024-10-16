@@ -6,7 +6,7 @@ type dateProps = {
 
 export function useDateFormatter() {
 
-    function formatDate(strDate: string | undefined, displayHour = true, compareTo: dateProps = { compareTo: '' }) {
+    function formatDate(strDate: string | undefined, compareTo: dateProps = { compareTo: '' }) {
         if (!strDate) {
             return ''; // or handle the undefined case
         }
@@ -34,16 +34,10 @@ export function useDateFormatter() {
         const day = date.toLocaleDateString(userLanguage, { day: "2-digit" })
         const hour = date.toLocaleTimeString(userLanguage, { hour: "2-digit", hour12: hourFormat, minute: "2-digit" })
 
-        let hasHour = displayHour ? `à ${hour}` : ''
         // const weekdayCap = weekday.charAt(0).toUpperCase() + weekday.slice(1)
 
         // Step 3: Format the date according to user language
         formattedDate = `${day}-${month}-${year}`
-
-        if (userLanguage === "en") {
-            hasHour = displayHour ? `at ${hour}` : ''
-            //   formattedDate = `${weekdayCap}, ${month} ${day}, ${year} ${hasHour}`;
-        }
 
         // returns only hour if day is same as start date
         if (sameAsStart) {
